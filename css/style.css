@@ -1,0 +1,85 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+
+.popup {
+  width: 350px;
+}
+.popup :where(.picker, header, .all-colors, .color)  {
+  display: flex;
+  align-items: center;
+}  
+
+.popup .picker {
+  background-color: #e3f2fd;
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.picker #color-picker {
+  outline: none;
+  border: none;
+  color: #fff;
+  background-color: #5372f0;
+  font-size: 1rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.picked-colors {
+  margin: 10px 15px;
+}
+
+.picked-colors.hide {
+  display: none;
+}
+
+.picked-colors header {
+  justify-content: space-between;
+}
+
+.picked-colors .clear-All {
+  color: #5372f0;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.all-colors {
+  margin: 10px 0;
+  flex-wrap: wrap;
+
+}
+
+.all-colors .color {
+  cursor: pointer;
+  margin-bottom: 10px;
+  width: calc(100% / 3);
+}
+
+
+.all-colors .color .rect {
+  display: block;
+  height: 22px;
+  width: 22px;
+  margin-right: 8px;
+  border-radius: 5px;
+}
+
+
+.all-colors .color .value {
+  font-size: 0.96rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
